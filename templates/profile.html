@@ -1,0 +1,16 @@
+<button onclick="getProfile()">Load Profile</button>
+
+<script>
+async function getProfile() {
+    const token = localStorage.getItem("token");
+
+    const res = await fetch("http://127.0.0.1:8000/profile/", {
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    const data = await res.json();
+    console.log(data);
+}
+</script>

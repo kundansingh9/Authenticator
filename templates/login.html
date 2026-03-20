@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="logo">⚡ Authenticator</div>
+
+<div class="card">
+
+    <h2>Sign in with username</h2>
+    <p class="subtitle">
+        Welcome Back!<br>
+        Please enter your details.
+    </p>
+
+    <input type="text" id="username" placeholder="Username">
+    
+    <div class="password-box">
+        <input type="password" id="password" placeholder="Password">
+        <span onclick="togglePassword()">👁️</span>
+    </div>
+
+    <div class="forgot">Forgot password?</div>
+
+    <button onclick="login()">Get Started</button>
+
+    <p class="bottom-text">
+        Don't have an account? <a href="/api/register-page/">Register</a>
+    </p>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>

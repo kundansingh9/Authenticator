@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="logo">⚡ Authenticator</div>
+
+<div class="card">
+    <div class="icon">👤</div>
+
+    <h2>Create Account</h2>
+    <p class="subtitle">
+        Join us and start your journey 🚀
+    </p>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="email" id="email" placeholder="Email">
+
+    <div class="password-box">
+        <input type="password" id="password" placeholder="Password">
+        <span onclick="togglePassword()">👁️</span>
+    </div>
+
+    <button onclick="register()">Register</button>
+
+    <p id="message"></p>
+
+    <p class="bottom-text">
+        Already have an account? <a href="/api/">Login</a>
+    </p>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
+
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Account 🚀</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="register()">Register</button>
+
+    <p id="message"></p>
+
+    <p>Already have an account? 
+        <a href="/api/">Login</a>
+    </p>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html> {% endcomment %}

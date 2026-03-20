@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>⚡ Authenticator Dashboard</h2>
+    <div class="nav-actions">
+        <button class="profile-btn" onclick="toggleProfile()">Profile</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div id="profileDropdown" class="profile-dropdown">
+    <p id="profileUsername"></p>
+    <p id="profileEmail"></p>
+</div>
+
+<div class="container">
+    <div class="welcome-card">
+        <h1 id="welcomeText">Loading...</h1>
+        <p>Welcome back! Here's what's happening today 💙</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">📊 Analytics</div>
+        <div class="card">📁 Projects</div>
+        <div class="card">⚙️ Settings</div>
+    </div>
+</div>
+
+<script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+
+
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body style="font-family: Arial; text-align:center; margin-top:50px;">
+
+<h1>🎉 Welcome to Dashboard</h1>
+<p id="user"></p>
+
+<button onclick="loadProfile()">Load Profile</button>
+<button onclick="logout()">Logout</button>
+
+<script>
+async function loadProfile() {
+    const token = localStorage.getItem("token");
+
+    const res = await fetch("/api/profile/", {
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    const data = await res.json();
+    document.getElementById("user").innerText =
+        "Username: " + data.username + " | Email: " + data.email;
+}
+
+function logout() {
+    localStorage.removeItem("token");
+    window.location.href = "/api/";
+}
+</script>
+
+</body>
+</html> {% endcomment %}
